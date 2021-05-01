@@ -6,7 +6,7 @@ const urlParams = new URLSearchParams(queryString);
 const key = urlParams.get('key');
 
 function getQuote($key){
-    return quotes.get($key);
+    return quotes.get($key).quote;
 }
 
 document.getElementById("quote").innerHTML = getQuote(key);
