@@ -19,8 +19,17 @@ function getDate($key){
 function getProfilePicture($key){
     return quotes.get($key).picture;
 }
+
+function getUrl($key){
+    return quotes.get($key).url;
+}
+
 const quote = document.getElementById("quote").innerHTML = getQuote(key);
 
 const source = document.getElementById("source").innerHTML = getSource(key);
 const date = document.getElementById("date").innerHTML = getDate(key);
 const img = document.getElementById("picture").src = getProfilePicture(key);
+const url = document.getElementById("url").innerText = getUrl(key);
+document.getElementById("url").href = getUrl(key);
+// url.href=getUrl(key);
+
