@@ -24,6 +24,8 @@ function getUrl($key){
     return quotes.get($key).url;
 }
 
+console.log('Javascript Loaded');
+
 const quote = document.getElementById("quote").innerHTML = getQuote(key);
 
 const source = document.getElementById("source").innerHTML = getSource(key);
